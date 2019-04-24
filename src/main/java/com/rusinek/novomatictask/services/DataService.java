@@ -10,6 +10,8 @@ import java.util.Map;
  **/
 public interface DataService {
 
+    Statistics authenticate(String user);
+
     List<String> getValuesForGivenKey(String jsonArrayStr, String key);
 
     Map<String, String> summarize(List<String> languages, List<String> size);
