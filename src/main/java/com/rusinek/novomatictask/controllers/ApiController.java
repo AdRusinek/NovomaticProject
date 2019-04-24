@@ -22,11 +22,21 @@ public class ApiController {
     }
 
 
+    /**
+     * @param user is taken from the url path
+     * @return data corresponded with specific user
+     */
     @RequestMapping("/statistics/{user}")
     public Statistics getInformations(@PathVariable String user) {
         return dataService.authenticate(user);
     }
 
+
+    /**
+     * This method is used for showing specific template in case of 404 error
+     *
+     * @return custom error handling page
+     */
     @ResponseStatus(HttpStatus.NOT_FOUND)
     @ExceptionHandler(ResourceNotFoundException.class)
     public ModelAndView handleNotFound() {

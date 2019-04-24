@@ -15,17 +15,6 @@ public class Statistics {
         this.languages = languages;
     }
 
-    public Statistics() {
-    }
-
-    public void setRepositoriesCount(int repositoriesCount) {
-        this.repositoriesCount = repositoriesCount;
-    }
-
-    public void setLanguages(Map<String, String> languages) {
-        this.languages = languages;
-    }
-
     public int getRepositoriesCount() {
         return repositoriesCount;
     }
